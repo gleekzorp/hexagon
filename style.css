@@ -1,0 +1,177 @@
+/* body
+{
+  margin: 0;
+  padding: 0;
+}
+
+* 
+{
+  box-sizing: border-box;
+} */
+
+
+/* https://www.youtube.com/watch?v=jPIskLkEvU4 */
+/* .hexagon {
+  width: 400px;
+  height: 200px;
+  background: red;
+  transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  margin: 200px auto;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.hexagon-inside {
+  width: 100%;
+  height: 100%;
+  background: green;
+  transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  overflow: hidden;
+}
+
+.hexagon-image {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  visibility: visible;
+} */
+
+
+/* Quick with no borders */
+/* .hexagon {
+  background-color: red;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+} */
+
+
+/* https://www.youtube.com/watch?v=oOETNxKsU5Y Making the Hex*/
+/* .hex2 {
+  position: relative;
+  z-index: 1;
+  margin: 80px 10px;
+}
+
+.hex2,
+.hex2:after,
+.hex2:before {
+  background: blue;
+  height: 100px;
+  width: 173.2px;
+}
+
+.hex2:after,
+.hex2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hex2:after {
+  background: blue;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.hex2:before {
+  background: blue;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+} */
+
+
+
+/* https://www.youtube.com/watch?v=gBHk2HFaD1Q Adding Borders and Effects*/
+
+/* To adjust the width of the border follow the width adjust steps below */
+.hex2 {
+  position: relative;
+  z-index: 1;
+  margin: 80px 10px;
+}
+
+.hex2,
+.hex2:after,
+.hex2:before {
+  border-color: red;
+  /* Width adjust 1 */
+  border-width: 1px;
+  border-style: solid;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  height: 100px;
+  /* Width adjust 3 */
+  width: 172.2px;
+}
+
+.hex2:after,
+.hex2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* Width adjust 2 */
+  left: -1px;
+  z-index: -1;
+}
+
+.hex2:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.hex2:before {
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+/* Hover effect for hexagon to change colors */
+.hex2:hover,
+.hex2:hover:after,
+.hex2:hover:before {
+  background: red;
+}
+
+/* Hover effect for hexagon to rotate */
+.hex-container {
+  display: inline-block;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.hex-container:hover {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
